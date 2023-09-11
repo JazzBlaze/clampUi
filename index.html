@@ -1,0 +1,215 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="styles/style.css" />
+    <script>document.documentElement.className="js";var supportsCssVars=function(){var e,t=document.createElement("style");return t.innerHTML="root: { --tmp-var: bold; }",document.head.appendChild(t),e=!!(window.CSS&&window.CSS.supports&&window.CSS.supports("font-weight","var(--tmp-var)")),t.parentNode.removeChild(t),e};supportsCssVars()||alert("Please view this demo in a modern browser that supports CSS Variables.");</script>
+
+    <title>Clamp</title>
+  </head>
+  <body>
+    <div class="tw-overflow-hidden tw-w-full tw-flex tw-justify-center tw-h-fit tw-mt-5">
+      <div id="menu" class="tw-z-10 tw-fixed tw-w-[60vw] tw-h-[50px] tw-rounded-2xl glossy tw-flex tw-justify-between tw-px-4  tw-flex-wrap">
+        <div class="tw-flex  tw-flex-wrap tw-mt-2">
+          <svg class="tw-w-[30px] tw-self-start" fill="#141414" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 1000 1250" enable-background="new 0 0 1000 1000" xml:space="preserve"><g><path d="M626.4,671.7c-23.9,8-48.9,12.1-74.2,12.1c-23.4,0-46.6-3.5-69-10.4c-1.6-0.5-3.3-0.1-4.4,1.1l-98.1,98.1   c-20,20-46.7,31-75,31c-28.4,0-55-11-75-31l-2.3-2.3c-41.4-41.4-41.4-108.7,0-150.1l144.6-144.6c20-20,46.7-31,75-31   c28.4,0,55,11,75,31l2.3,2.3c17,17,27.4,38.5,30.2,62.4c0.3,2.4,2.4,4.1,4.8,3.9c21.9-1.9,42.6-11.5,58.1-27l37.1-37.1   c1.2-1.2,1.6-3.1,1-4.7c-11.1-29.5-28-55.9-50.5-78.3l-2.3-2.3c-41.6-41.6-96.9-64.5-155.9-64.5c-58.9,0-114.3,22.9-155.9,64.5   L147.4,539.4c-85.9,85.9-85.9,225.8,0,311.7l2.3,2.3c41.6,41.6,96.9,64.5,155.9,64.5s114.3-22.9,155.9-64.5L606,708.8   c9.4-9.4,17.9-19.6,25.4-30.4c1.1-1.6,1-3.7-0.1-5.2C630.2,671.7,628.2,671.1,626.4,671.7z M599.8,702.6L455.2,847.2   c-39.9,39.9-93,61.9-149.6,61.9c-56.6,0-109.7-22-149.6-61.9l-2.3-2.3c-82.5-82.5-82.5-216.7,0-299.2l144.6-144.6   c39.9-39.9,93-61.9,149.6-61.9c56.6,0,109.7,22,149.6,61.9l2.3,2.3c20.8,20.8,36.8,45.2,47.4,72.5l-35,35   c-13.1,13.1-30.1,21.5-48.4,24c-3.8-24.1-14.9-45.9-32.2-63.3l-2.3-2.3c-21.7-21.7-50.6-33.6-81.3-33.6s-59.6,11.9-81.3,33.6   L221.9,613.9c-44.8,44.8-44.8,117.8,0,162.6l2.3,2.3c21.7,21.7,50.6,33.6,81.3,33.6c30.8,0,59.6-11.9,81.3-33.6l96.3-96.3   c22.4,6.6,45.6,10,69,10c21.7,0,43.2-2.9,64.1-8.6C611.1,690.5,605.6,696.7,599.8,702.6z"/><path d="M852.6,150.5l-2.3-2.3c-41.6-41.6-96.9-64.5-155.9-64.5c-58.9,0-114.3,22.9-155.9,64.5L394,292.8   c-9.4,9.4-17.9,19.6-25.4,30.4c-1.1,1.6-1,3.7,0.1,5.2c1.1,1.5,3.1,2.2,5,1.5c23.9-8,48.9-12.1,74.2-12.1c23.4,0,46.6,3.5,69,10.4   c1.6,0.5,3.3,0.1,4.4-1.1l98.1-98.1c20-20,46.7-31,75-31c28.4,0,55,11,75,31l2.3,2.3c41.4,41.4,41.4,108.7,0,150.1L627.2,526   c-20,20-46.7,31-75,31c-28.4,0-55-11-75-31l-2.3-2.3c-17-17-27.4-38.5-30.3-62.4c-0.3-2.4-2.4-4.1-4.8-3.9   c-21.9,1.9-42.6,11.5-58.1,27l-37.1,37.1c-1.2,1.2-1.6,3.1-1,4.7c11.1,29.5,28,55.9,50.5,78.3l2.3,2.2   c41.6,41.6,96.9,64.3,155.9,64.3c0,0,0,0,0,0c58.9,0,114.3-22.7,155.8-64.3l144.6-144.5C938.6,376.2,938.6,236.5,852.6,150.5z"/></g></svg>
+          <h2 class="tw-text-black tw-text-h3-xl tw-font-bold ">CLAMP</h2>
+        </div>
+        
+        <svg class="plus tw-mt-3" fill="none" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M12 24L12 0" stroke="#A3A3A3" stroke-width="2"></path><path d="M24 12H0" stroke="#A3A3A3" stroke-width="2"></path></svg>
+      </div>
+    </div>
+    <div class="tw-mt-[50px]">
+      <h1 class="header tw-text-center tw-text-white  tw-uppercase tw-text-[6rem]">Explore</h1>
+      <div class="tw-overflow-hidden">
+        <h2 class="header2 tw-text-center tw-text-grey tw-font-mNeueL">Buy any crypto index anytime anywhere.</h2>
+      </div>
+
+
+
+      <div id="fade">
+        <h3 class="tw-font-mNeueL tw-text-grey tw-pl-10">Sample 1</h3>
+        <section class="content">
+                <div class="grid grid--effect-vega">
+                  <a href="#" class="grid__item grid__item--c1">
+                    <div class="stack">
+                      <div class="stack__deco"></div>
+                      <div class="stack__deco"></div>
+                      <div class="stack__deco"></div>
+                      <div class="stack__deco"></div>
+                      <div class="stack__deco"></div>
+                    </div>
+                  </a>
+                  <a href="#" class="grid__item grid__item--c2">
+                    <div class="stack">
+                      <div class="stack__deco"></div>
+                      <div class="stack__deco"></div>
+                      <div class="stack__deco"></div>
+                      <div class="stack__deco"></div>
+                      <div class="stack__deco"></div>
+                    </div>
+                  </a>
+                  <a href="#" class="grid__item grid__item--c3">
+                    <div class="stack">
+                      <div class="stack__deco"></div>
+                      <div class="stack__deco"></div>
+                      <div class="stack__deco"></div>
+                      <div class="stack__deco"></div>
+                      <div class="stack__deco"></div>
+                    </div>
+                  </a>
+                </div>
+              </section>
+        <h3 class="tw-font-mNeueL tw-text-grey tw-pl-10">Sample 2</h3>
+        <div class="main">
+          <div class="columns">
+            <div class="column">
+                    <figure class="column__item">
+                        <div class="column__item-imgwrap">
+                            <div class="column__item-img" style="background-image:url(img/9.jpg)"></div>
+                        </div>
+                    </figure>
+                    <figure class="column__item">
+                        <div class="column__item-imgwrap">
+                            <div class="column__item-img" style="background-image:url(img/10.jpg)"></div>
+                        </div>
+                    </figure>
+                    <figure class="column__item">
+                        <div class="column__item-imgwrap">
+                            <div class="column__item-img" style="background-image:url(img/11.jpg)"></div>
+                        </div>
+                    </figure>
+                    <figure class="column__item">
+                        <div class="column__item-imgwrap">
+                            <div class="column__item-img" style="background-image:url(img/12.jpg)"></div>
+                        </div>
+                    </figure>
+                    <figure class="column__item">
+                        <div class="column__item-imgwrap">
+                            <div class="column__item-img" style="background-image:url(img/13.jpg)"></div>
+                        </div>
+                    </figure>
+                    <figure class="column__item">
+                        <div class="column__item-imgwrap">
+                            <div class="column__item-img" style="background-image:url(img/14.jpg)"></div>
+                        </div>
+                    </figure>
+                    <figure class="column__item">
+                        <div class="column__item-imgwrap">
+                            <div class="column__item-img" style="background-image:url(img/15.jpg)"></div>
+                        </div>
+                    </figure>
+                    <figure class="column__item">
+                        <div class="column__item-imgwrap">
+                            <div class="column__item-img" style="background-image:url(img/16.jpg)"></div>
+                        </div>
+                    </figure>
+                </div><!-- /column -->
+                <div class="column">
+                    <figure class="column__item">
+                        <div class="column__item-imgwrap">
+                            <div class="column__item-img" style="background-image:url(img/1.jpg)"></div>
+                        </div>
+                    </figure>
+                    <figure class="column__item">
+                        <div class="column__item-imgwrap">
+                            <div class="column__item-img" style="background-image:url(img/2.jpg)"></div>
+                        </div>
+                    </figure>
+                    <figure class="column__item">
+                        <div class="column__item-imgwrap">
+                            <div class="column__item-img" style="background-image:url(img/3.jpg)"></div>
+                        </div>
+                    </figure>
+                    <figure class="column__item">
+                        <div class="column__item-imgwrap">
+                            <div class="column__item-img" style="background-image:url(img/4.jpg)"></div>
+                        </div>
+                    </figure>
+                    <figure class="column__item">
+                        <div class="column__item-imgwrap">
+                            <div class="column__item-img" style="background-image:url(img/5.jpg)"></div>
+                        </div>
+                    </figure>
+                    <figure class="column__item">
+                        <div class="column__item-imgwrap">
+                            <div class="column__item-img" style="background-image:url(img/6.jpg)"></div>
+                        </div>
+                    </figure>
+                    <figure class="column__item">
+                        <div class="column__item-imgwrap">
+                            <div class="column__item-img" style="background-image:url(img/7.jpg)"></div>
+                        </div>
+                    </figure>
+                    <figure class="column__item">
+                        <div class="column__item-imgwrap">
+                            <div class="column__item-img" style="background-image:url(img/8.jpg)"></div>
+                        </div>
+                    </figure>
+                </div><!-- /column -->
+                <div class="column">
+                    <figure class="column__item">
+                        <div class="column__item-imgwrap">
+                            <div class="column__item-img" style="background-image:url(img/17.jpg)"></div>
+                        </div>
+                    </figure>
+                    <figure class="column__item">
+                        <div class="column__item-imgwrap">
+                            <div class="column__item-img" style="background-image:url(img/18.jpg)"></div>
+                        </div>
+                    </figure>
+                    <figure class="column__item">
+                        <div class="column__item-imgwrap">
+                            <div class="column__item-img" style="background-image:url(img/19.jpg)"></div>
+                        </div>
+                    </figure>
+                    <figure class="column__item">
+                        <div class="column__item-imgwrap">
+                            <div class="column__item-img" style="background-image:url(img/20.jpg)"></div>
+                        </div>
+                    </figure>
+                    <figure class="column__item">
+                        <div class="column__item-imgwrap">
+                            <div class="column__item-img" style="background-image:url(img/21.jpg)"></div>
+                        </div>
+                    </figure>
+                    <figure class="column__item">
+                        <div class="column__item-imgwrap">
+                            <div class="column__item-img" style="background-image:url(img/22.jpg)"></div>
+                        </div>
+                    </figure>
+                    <figure class="column__item">
+                        <div class="column__item-imgwrap">
+                            <div class="column__item-img" style="background-image:url(img/23.jpg)"></div>
+                        </div>
+                    </figure>
+                    <figure class="column__item">
+                        <div class="column__item-imgwrap">
+                            <div class="column__item-img" style="background-image:url(img/24.jpg)"></div>
+                        </div>
+                    </figure>
+                </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+   
+    
+    <script type="module" src="/main.js"></script>
+    <script src="./js/anime.min.js"></script>
+    <script type="module" src="./js/scroll.js"></script>
+    <script type="module" src="./js/hover.js"></script>
+    <script>
+      setTimeout(function() {
+        (function() {
+          [].slice.call(document.querySelectorAll(' .grid__item')).forEach(function(stackEl) {
+            new VegaFx(stackEl);
+          });
+        })();
+      }, 100);
+    </script>
+    
+  </body>
+</html>
